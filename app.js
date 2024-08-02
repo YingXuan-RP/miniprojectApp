@@ -21,10 +21,10 @@ app.use(express.static('public'));
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'c237_miniprojectapp'
+    host: 'db4free.net',
+    user: 'yxminiproject',
+    password: 'Sunflowerlodge0311',
+    database: 'yxminiproject'
 });
     connection.connect((err) => {
     if (err) {
