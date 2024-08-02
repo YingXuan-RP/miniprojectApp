@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deal Matching Platform - Sign Up Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .custom-control-label {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container {
+            display: grid;
+            grid-template-columns: 167px 333px;
+            gap: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="signup-section">
+                                <h2>Create a New Account</h2>
+                                <form action="/signupForm" method="post" onsubmit="return validateForm()">
+                                   
+                        </div>
+                            <div class="mb-3">
+                                <b><label for="email" class="form-label">Email address:</label></b>
+                                <input type="email" name="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <b><label for="username" class="form-label">Username:</label></b>
+                                <input type="text" name="username" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <b><label for="password" class="form-label">Password:</label></b>
+                                <input type="password" name="password" class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onkeyup="isPasswordMatch()" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <b><label for="confirmpassword" class="form-label">Confirm Password:</label></b>
+                                <input type="password" name="confirmpassword" class="form-control" id="confirmpassword" onkeyup="isPasswordMatch()" required>
+                            </div>
+                            <div id="divCheckPassword"></div>
+                            <div class="mb-3">
+                                <b><label for="role" class="form-label">Role:</label></b>
+                                <select name="role" class="form-control" id="role" required>
+                                    <option value="Entrepreneur">Entrepreneur</option>
+                                    <option value="Venture Capitalist">Venture Capitalist</option>
+                                    <option value="Private Equity Investor">Private Equity Investor</option>
+                                    <option value="Family Office Investor">Family Office Investor</option>
+                                    <option value="Individual Investor">Individual Investor</option>
+                                    <option value="Corporate Investor">Corporate Investor</option>
+                                    <option value="Advisor/Broker">Advisor/Broker</option>
+                                    <option value="Service Provider">Service Provider</option>
+                                    <option value="Corporate Partner">Corporate Partner</option>
+                                </select>
+                            </div>
+
+                            <b><label for="role" class="form-label">Sector:</label></b>
+                            <div class="checkbox-container">  
+                            <label class="container">Technology
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                              
+                              <label class="container">Finance
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              
+                              <label class="container">Healthcare
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              
+                              <label class="container">Consumer goods
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Industrial
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Services 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Real Estate
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Education
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Entertainment
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+
+                              <label class="container">Others 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              
+                            </div>
+                             <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>Already have an account? <a href="/loginForm">Login here</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h15>© Copyright 2024. All Rights Reserved.</h15>
+        </div>
+</body>
+</html>

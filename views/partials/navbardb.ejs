@@ -1,0 +1,66 @@
+<style>
+    .nav-link {
+        color: white;
+    }
+    .nav-link:visited {
+        color: white;
+    }
+    .nav-link:active,
+    .nav-link:hover {
+        color: grey
+    }
+    .db-sidebar{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: grey;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px; 
+        display: flex;
+        flex-direction: column;
+    }
+    .db-sidebar a{
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+    .db-sidebar a:hover{
+        color: black;
+    }
+
+    .db-bar-item{
+        flex: 1;
+        text-align: center;
+    }
+    
+</style>
+</head>
+<body>
+  
+  <div id="main"> 
+    <div class="db-teal">
+        <div class="db-container">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:3000/dashboard">
+            <img src="/images/logo.jpg" alt="Mdeal" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/dashboard">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/companies">Companies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/addcompany">Add Companies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
